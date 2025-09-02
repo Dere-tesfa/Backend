@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
-const custome = mongoose.Schema({
-    name: String,
+const mongoose = require("mongoose")
+const custome = new mongoose.Schema({
+    name: String
 })
-const customes = mongoose.model('customes', custome);
-const create = new customes({
-    name: 'dereje t'
+const listItem = mongoose.model('listItem', custome);
+const createItem = new listItem({
+    name: 'dereje tesfaye'
 })
-const saveCustom = create.save();
-
-console.log(saveCustom);
+const saveItem = createItem.save()
+console.log(saveItem);
+module.exports = listItem;
